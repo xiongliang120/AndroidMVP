@@ -24,7 +24,6 @@ import chongchong.wei.rx_retrofit_mvp.base.proxy.MvpProxyImpl;
  */
 public abstract class BaseMvpActivity extends AppCompatActivity {
     private MvpProxyImpl mvpProxy;
-    protected List<BasePresenter> mPresenters;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,12 +53,7 @@ public abstract class BaseMvpActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        for (BasePresenter p : mPresenters) {
-            p.detachView();
-        }
         mvpProxy.unbindPresenter();
-        mPresenters.clear();
-        mPresenters = null;
     }
 
     @SuppressWarnings("ConstantConditions")

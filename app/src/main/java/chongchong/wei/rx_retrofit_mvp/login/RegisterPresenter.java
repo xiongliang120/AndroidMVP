@@ -24,7 +24,7 @@ public class RegisterPresenter extends BasePresenter<RegisterContract.IView, Reg
                     mView.showToast("注册成功");
                     Log.i("xiongliang","注册成功");
                     mView.showProgress(false);
-                    mView.goToMainActivity();
+                    mView.goToLoginActivity();
                 }
             }
 

@@ -14,8 +14,8 @@ public class RegisterContract {
      * V 定义View的行为，调用者是P
      */
     interface IView extends IBaseView {
-        //登录成功跳转到主界面
-        void goToMainActivity();
+        //注册成功跳转到登录页
+        void goToLoginActivity();
     }
 
     /**

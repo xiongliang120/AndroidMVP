@@ -48,6 +48,17 @@ public class LoginActivity extends BaseMvpActivity implements LoginContract.IVie
     }
 
     @Override
+    public void goToLoginActivity() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                //todo 注册成功跳转到登录界面
+                Log.i("mvp_", "注册成功跳转到登录界面");
+            }
+        });
+    }
+
+    @Override
     public void showProgress(boolean isShow) {
         if (isShow) {
             Log.i("mvp_", "显示等待框");
@@ -60,4 +71,6 @@ public class LoginActivity extends BaseMvpActivity implements LoginContract.IVie
     public void showToast(String str) {
         Toast.makeText(this, str, Toast.LENGTH_LONG).show();
     }
+
+
 }
