@@ -13,11 +13,11 @@ import chongchong.wei.rx_retrofit_mvp.base.BasePresenter;
 import chongchong.wei.rx_retrofit_mvp.base.InjectPresenter;
 
 public class LoginActivity extends BaseMvpActivity implements LoginContract.IView,RegisterContract.IView {
+    private int tmp = 0;
     @InjectPresenter
     private LoginPresenter loginPresenter;
     @InjectPresenter
     private RegisterPresenter registerPresenter;
-
     @Override
     protected Object getLayout() {
         return R.layout.activity_main;

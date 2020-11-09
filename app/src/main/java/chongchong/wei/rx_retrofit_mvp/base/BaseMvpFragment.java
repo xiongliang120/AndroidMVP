@@ -65,7 +65,7 @@ public abstract class BaseMvpFragment extends Fragment {
 
     private MvpProxyImpl createProxy() {
         if (mvpProxy == null) {
-            return new MvpProxyImpl<>((IBaseView) this);
+            return new MvpProxyImpl((IBaseView) this);
         }
         return mvpProxy;
     }
